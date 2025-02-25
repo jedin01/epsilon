@@ -5,7 +5,6 @@ public class FucntionStudyService {
     public String getDominio(String function){
         return "";
     }
-
     public String getZeros(String function){
         return "";
     }
