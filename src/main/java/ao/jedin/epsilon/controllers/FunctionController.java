@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@RequestMapping(name = "analizar")
+@RequestMapping(name="/analizar")
 public class FunctionController {
 
     @GetMapping
