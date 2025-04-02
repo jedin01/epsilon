@@ -1,6 +1,7 @@
 package ao.jedin.epsilon.controllers;
 
 
+import ao.jedin.epsilon.services.FunctionStudyService;
 import org.matheclipse.core.eval.ExprEvaluator;
 import org.matheclipse.core.interfaces.IExpr;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class FunctionController{
 
     @GetMapping("/solve")
     public ResponseEntity<HashMap<String, Object>> solve(@RequestParam(required = false) String expression){
-        HashMap<String, Object> response = FunctionStud
+        HashMap<String, Object> response = new FunctionStudyService(expression).getAll();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
